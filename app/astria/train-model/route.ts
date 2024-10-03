@@ -14,9 +14,6 @@ const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
 const appWebhookSecret = process.env.APP_WEBHOOK_SECRET;
 const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === "true";
 
-if (!appWebhookSecret) {
-  throw new Error("MISSING APP_WEBHOOK_SECRET!");
-}
 
 export async function POST(request: Request) {
   const payload = await request.json();
