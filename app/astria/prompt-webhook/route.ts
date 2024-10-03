@@ -24,9 +24,7 @@ if (!supabaseServiceRoleKey) {
   throw new Error("MISSING SUPABASE_SERVICE_ROLE_KEY!");
 }
 
-if (!appWebhookSecret) {
-  throw new Error("MISSING APP_WEBHOOK_SECRET!");
-}
+
 
 export async function POST(request: Request) {
   type PromptData = {
